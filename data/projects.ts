@@ -36,7 +36,7 @@ export const projects: Project[] = [
 	{
 		id: 'arc-website',
 		name: 'ARC Website',
-		images: ['arc-website-1.png'],
+		images: ['arc-website-1.png', 'arc-website-2.png', 'arc-website-3.png'],
 		tech: ['gatsby', 'supabase', 'tailwind', 'contentful'],
 		description:
 			'The newly redesigned American Reading Company website. Built from the ground up with Gatsby for blazing fast page loads, Contentful as the CMS for easy content updates and Supabase for all our database and authentication needs.',
