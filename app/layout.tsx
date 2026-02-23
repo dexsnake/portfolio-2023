@@ -3,13 +3,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { twMerge } from 'tailwind-merge'
+import { projects } from '@/data/projects'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-	title: 'Travis Butler | Portfolio',
-	description: 'The portfolio website for Travis Butler, Software Engineer'
-}
+export const metadata: Metadata = { title: 'Travis Butler | Portfolio', description: 'The portfolio website for Travis Butler, Software Engineer' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
@@ -24,14 +22,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 								{'}'}
 							</span>
 						</div>
-						<div className="text-white font-medium flex gap-8">
-							<a href="#about" className="hover:bg-white/5 rounded-lg px-3 py-2 transition-all">
-								About
-							</a>
-							<a href="#work" className="hover:bg-white/5 rounded-lg px-3 py-2 transition-all">
-								Work
-							</a>
-						</div>
+						{projects.length > 0 && (
+							<div className="text-white font-medium flex gap-8">
+								<a href="#about" className="hover:bg-white/5 rounded-lg px-3 py-2 transition-all">
+									About
+								</a>
+								<a href="#work" className="hover:bg-white/5 rounded-lg px-3 py-2 transition-all">
+									Work
+								</a>
+							</div>
+						)}
 					</div>
 				</header>
 				<main className="max-w-screen-xl mx-auto px-4">{children}</main>

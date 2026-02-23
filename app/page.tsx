@@ -23,14 +23,14 @@ export default function Home() {
 							An experienced <span className="text-white">Software Engineer</span> based in the <br className="hidden sm:block" /> Philadelphia suburbs.
 						</span>
 					</div>
-					<div className="mb-2">
+					<div className="mb-10">
 						<span className="text-lg sm:text-2xl text-gray-500">
-							🧑‍💻 Currently working at <span className="text-emerald-400">American Reading Company</span>.
+							🧑‍💻 Currently working at <span className="text-emerald-400 hover:text-emerald-300 transition-all hover:underline"><a href="https://grafana.com" target="_blank">Grafana Labs</a></span>.
 						</span>
 					</div>
-					<div className="mb-10">
+					{/* <div className="mb-10">
 						<span className="text-lg sm:text-2xl text-gray-500">🚀 Exploring new opportunities and side projects.</span>
-					</div>
+					</div> */}
 					<div className="flex gap-6">
 						<a href="https://www.linkedin.com/in/travisrbutler/" target="_blank">
 							<button className="bg-white/5 flex items-center font-semibold gap-2 hover:bg-white/10 text-white px-4 py-3 rounded-lg">
@@ -81,11 +81,10 @@ export default function Home() {
 								⚡️ About Me
 							</h2>
 							<p className="text-gray-500 max-w-xl mb-3 text-lg">
-								I am a Software Engineer with 8+ years of experience building full stack web applications, sleek websites and custom software.
+								I am a Software Engineer with 10+ years of experience building full stack web applications, sleek websites and custom software.
 							</p>
 							<p className="text-gray-500 max-w-xl text-lg">
-								I currently work for American Reading Company as a Senior Software Engineer, helping build products that support our mission of teaching children
-								how to read.
+								I currently work at Grafana Labs as a Senior Software Engineer, building scalable observability and monitoring solutions used by engineering teams worldwide.
 							</p>
 						</div>
 						<div className="hidden w-1/2 sm:flex justify-center">
@@ -100,7 +99,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section>
+			{projects.length > 0 && <section>
 				<div className="pt-32">
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
 						<div className="mb-6">
@@ -120,7 +119,7 @@ export default function Home() {
 						))}
 					</div>
 				</div>
-			</section>
+			</section>}
 		</>
 	)
 }
